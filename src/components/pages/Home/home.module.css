@@ -1,22 +1,32 @@
 .infoMain {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 3.5rem;
     background-image: url(../../../assets/Background.svg);
-    /* width: 1440px; */
-    /* background-size: cover; */
+    /* height: 34rem; */
+    /* background-size: 50rem; */
+    background-repeat: no-repeat;
     padding: 0 14rem;
-    margin: 0 -14rem;
+    margin: 5rem -14rem;
+}
 
+h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+span {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: var(--base-subtitle);
+    line-height: 1.3;
 }
 
 .features {
     display: flex;
-    gap: 12px;
+    gap: 1.25rem 2.5rem;
     flex-wrap: wrap;
-    left: calc(50% - 567px/2 - 276.5px);
-    top: calc(50% - 84px/2 + 122px);
-
+    margin-top: 4.125rem;
 
 }
 
@@ -25,6 +35,10 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
+}
+
+.envolt:first-child {
+    margin-right: 5px;
 }
 
 .firstIcon {

@@ -1,5 +1,6 @@
 import styles from './home.module.css'
 import MainImg from '../../../assets/main-img.svg'
+import backgroundImg from '../../../assets/Background.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 
 export function Home() {
@@ -7,8 +8,7 @@ export function Home() {
 
     <div className={styles.infoMain}>
 
-
-      <div>
+      <div className={styles.absolute}>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
         <span>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</span>
 
