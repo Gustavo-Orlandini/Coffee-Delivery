@@ -1,5 +1,41 @@
-.aa {
+.content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.locale {
+    display: flex;
+    background: var(--purple-light);
+    gap: 12px;
+    color: var(--purple);
+    padding: 8px;
+    border-radius: 6px;
+    align-items: center;
+
+}
+
+.locale>p {
+    color: var(--purple-dark);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-radius: 6px;
+}
+
+.shoppingCart {
+    background: var(--yellow-light);
+    border-radius: 6px;
+    width: 2.375rem;
+    height: 2.375rem;
+    padding: 8px;
+    color: var(--yellow-dark);
 }
