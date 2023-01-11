@@ -2,6 +2,7 @@ import styles from './home.module.css'
 import MainImg from '../../../assets/main-img.svg'
 import backgroundImg from '../../../assets/Background.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
+import { MenuListCoffet } from '../../MenuListCoffe'
 
 export function Home() {
   return (
@@ -48,6 +49,8 @@ export function Home() {
       <img src={MainImg} alt="" />
 
     </div>
+
   )
 }
+<MenuListCoffet />
 
