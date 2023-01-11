@@ -1,0 +1,64 @@
+.infoMain {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+    background-image: url(../../../assets/Background.svg);
+    /* width: 1440px; */
+    /* background-size: cover; */
+    padding: 0 14rem;
+    margin: 0 -14rem;
+
+}
+
+.features {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    left: calc(50% - 567px/2 - 276.5px);
+    top: calc(50% - 84px/2 + 122px);
+
+
+}
+
+.envolt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.firstIcon {
+    color: var(--white);
+    width: 2rem;
+    height: 2rem;
+    background: var(--yellow-dark);
+    border-radius: 999px;
+    padding: 8px;
+}
+
+.secondIcon {
+    color: var(--white);
+    width: 2rem;
+    height: 2rem;
+    background: var(--base-text);
+    border-radius: 999px;
+    padding: 8px;
+}
+
+.thirdIcon {
+    color: var(--white);
+    width: 2rem;
+    height: 2rem;
+    background: var(--yellow);
+    border-radius: 999px;
+    padding: 8px;
+}
+
+.fourthIcon {
+    color: var(--white);
+    width: 2rem;
+    height: 2rem;
+    background: var(--purple);
+    border-radius: 999px;
+    padding: 8px;
+}
