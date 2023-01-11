@@ -1,5 +1,12 @@
+import styles from './home.module.css'
+
+
 export function Home() {
   return (
-    <h1>HOME</h1>
+
+    <div>
+      <h1>HOME</h1>
+
+    </div>
   )
 }
