@@ -1,13 +1,11 @@
 .infoMain {
     display: flex;
-    justify-content: space-around;
-    gap: 3.5rem;
+    justify-content: space-between;
+    /* gap: 3.5rem; */
     background-image: url(../../../assets/Background.svg);
-    /* height: 34rem; */
-    /* background-size: 50rem; */
+    background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 14rem;
-    margin: 5rem -14rem;
+    padding: 7rem 0;
 }
 
 h1 {
@@ -15,64 +13,21 @@ h1 {
     line-height: 1.3;
 }
 
-span {
+.subtitle {
     margin-top: 1rem;
     font-size: 1.25rem;
     color: var(--base-subtitle);
     line-height: 1.3;
+    max-width: 600px;
+
 }
 
 .features {
-    display: flex;
+    display: grid;
     gap: 1.25rem 2.5rem;
     flex-wrap: wrap;
+    grid-template-columns: fit-content(100%) fit-content(100%);
     margin-top: 4.125rem;
-
-}
-
-.envolt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.envolt:first-child {
-    margin-right: 5px;
-}
-
-.firstIcon {
-    color: var(--white);
-    width: 2rem;
-    height: 2rem;
-    background: var(--yellow-dark);
-    border-radius: 999px;
-    padding: 8px;
-}
-
-.secondIcon {
-    color: var(--white);
-    width: 2rem;
-    height: 2rem;
-    background: var(--base-text);
-    border-radius: 999px;
-    padding: 8px;
-}
-
-.thirdIcon {
-    color: var(--white);
-    width: 2rem;
-    height: 2rem;
-    background: var(--yellow);
-    border-radius: 999px;
-    padding: 8px;
-}
-
-.fourthIcon {
-    color: var(--white);
-    width: 2rem;
-    height: 2rem;
-    background: var(--purple);
-    border-radius: 999px;
-    padding: 8px;
+    justify-items: start;
+    /* width: 100%; */
 }

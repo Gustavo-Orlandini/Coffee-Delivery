@@ -3,45 +3,34 @@ import MainImg from '../../../assets/main-img.svg'
 import backgroundImg from '../../../assets/Background.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { MenuListCoffet } from '../../MenuListCoffe'
+import { Feature } from './components/Feature'
 
 export function Home() {
   return (
 
     <div className={styles.infoMain}>
 
-      <div className={styles.absolute}>
+      <div>
         <h1>Encontre o café perfeito para qualquer hora do dia</h1>
-        <span>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</span>
+        <p className={styles.subtitle}>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</p>
 
         <section className={styles.features}>
 
-          <div className={styles.envolt}>
-            <div className={styles.firstIcon}>
-              <ShoppingCart size={16} weight="fill" />
-            </div>
-            <p>Compra simples e segura</p>
-          </div>
+          <Feature text='Compra simples e segura' color='yellow-dark' icon={
+            <ShoppingCart size={16} weight="fill" />
+          } />
 
-          <div className={styles.envolt}>
-            <div className={styles.secondIcon}>
-              <Package size={16} weight="fill" />
-            </div>
-            <p>Compra simples e segura</p>
-          </div>
+          <Feature text='Embalagem mantém o café intacto' color='base-text' icon={
+            <Package size={16} weight="fill" />
+          } />
 
-          <div className={styles.envolt}>
-            <div className={styles.thirdIcon}>
-              <Timer size={16} weight="fill" />
-            </div>
-            <p>Entrega rápida e rastreada</p>
-          </div>
+          <Feature text='Entrega rápida e rastreada' color='yellow' icon={
+            <Timer size={16} weight="fill" />
+          } />
 
-          <div className={styles.envolt}>
-            <div className={styles.fourthIcon}>
-              <Coffee size={16} weight="fill" />
-            </div>
-            <p>O café chega fresquinho até você</p>
-          </div>
+          <Feature text='O café chega fresquinho até você' color='purple' icon={
+            <Coffee size={16} weight="fill" />
+          } />
 
         </section>
       </div>
