@@ -1,5 +1,23 @@
-.menu {
+.menuContainer {
     width: 100%;
-    background: var(--yellow);
-    height: 400px;
+    padding-top: 2rem;
+}
+
+.menuContainer h2 {
+    font-size: 2rem;
+    margin-bottom: 3.375rem;
+}
+
+.menuCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+}
+
+.card {
+    background: var(--base-card);
+    border-radius: 6px 36px;
+    width: 16rem;
+    height: 19.375rem;
 }
