@@ -1,5 +1,12 @@
-export function MenuListCoffet() {
+import styles from './menuListCoffee.module.css'
+
+export function MenuListCoffee() {
     return (
-        <h1>coffe</h1>
+        <div className={styles.menu}>
+
+            <h2>Nossos cafés</h2>
+
+        </div>
+
     )
 }
