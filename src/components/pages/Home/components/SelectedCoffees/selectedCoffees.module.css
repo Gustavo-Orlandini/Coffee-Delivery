@@ -1,0 +1,88 @@
+.chosenCoffeeContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.chosenCoffeeContainer img {
+    width: 4rem;
+    margin-right: 1.25rem;
+
+}
+
+.itemActions {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.quantityContainer {
+    display: flex;
+    width: 4.5rem;
+    background: var(--base-button);
+    border-radius: 6px;
+    /* align-self: center; */
+    height: 2rem;
+}
+
+.quantityContainer button {
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: var(--purple-dark);
+}
+
+.quantityContainer button:first-child {
+    padding-left: 0.5rem;
+}
+
+.quantityContainer button:last-child {
+    padding-right: 0.5rem;
+}
+
+.quantityContainer input {
+    background: var(--base-button);
+    border: 0;
+    /* background: transparent; */
+    width: 30px;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.removeButton {
+    display: flex;
+    background: var(--base-button);
+    border-radius: 6px;
+    margin-left: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 6px;
+    color: var(--purple-dark);
+    transition: background-color 0.2s;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.removeButton:hover {
+    display: flex;
+    background: var(--base-hover);
+
+}
+
+.removeButton span {
+    font-size: 0.75rem;
+    color: var(--base-subtitle);
+
+}
