@@ -6,6 +6,13 @@
     width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
+
+    /* codigo abaixo faz header estar fixado no scroll */
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--background);
+    z-index: 5;
 }
 
 .locale {

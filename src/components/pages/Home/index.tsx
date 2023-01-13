@@ -2,7 +2,7 @@ import styles from './home.module.css'
 import MainImg from '../../../assets/main-img.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { MenuListCoffee } from '../../MenuListCoffe'
-import { Feature } from './components/Feature'
+import { Feature } from './components/Features/Feature'
 
 export function Home() {
   return (

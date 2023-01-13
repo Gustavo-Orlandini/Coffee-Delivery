@@ -1,0 +1,182 @@
+.card {
+    background: var(--base-card);
+    border-radius: 6px 36px;
+    width: 16rem;
+    height: 19.375rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    padding-top: 0;
+    /* position: absolute; */
+    align-items: center;
+    gap: 4px;
+    /* margin-top: 1rem; */
+    margin-bottom: 1.25rem;
+    /* align-content: flex-start; */
+    /* position: relative; */
+}
+
+.tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 6.75rem;
+    margin-bottom: 1rem;
+    /* position: relative; */
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--base-subtitle);
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.875rem;
+    color: var(--base-label);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14rem;
+    /* width: 100%; */
+    margin-bottom: 1.375rem;
+
+}
+
+.footerRightContainer {
+    display: flex;
+    gap: 8px;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.priceContainer>p {
+    margin-bottom: -0.3rem;
+    font-size: 0.875rem;
+    text-align: end;
+    align-items: flex-end;
+    display: flex;
+}
+
+.priceContainer>h3 {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+}
+
+.quantityContainer {
+    display: flex;
+    /* gap: 8px; */
+    background: var(--base-button);
+    border-radius: 6px;
+    width: 5.5rem;
+    height: 2.375rem;
+}
+
+.quantityContainer button {
+    border: 0;
+    width: 30px;
+    border-radius: 6px;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: var(--purple-dark);
+
+}
+
+.quantityContainer input {
+    background: var(--base-button);
+    border: 0;
+    /* background: transparent; */
+    width: 30px;
+    font-size: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.addCoffeButton {
+    background: var(--purple-dark);
+    border-radius: 6px;
+    /* width: 2.375rem; */
+    height: 2.375rem;
+    padding: 8px;
+    color: var(--white);
+    transition: background-color 0.2s;
+}
+
+.addCoffeButton:hover {
+    background: var(--purple);
+
+}
+
+/* efeito de fumaça =========================*/
+.clouds {
+    position: absolute;
+}
+
+.clouds span {
+    animation: smoke 2s linear infinite;
+}
+
+.clouds span:nth-child(1) {
+    position: absolute;
+    left: 60%;
+    top: -15%;
+    background: rgb(126, 126, 126);
+    height: 30px;
+    width: 5px;
+    transform: rotate(45deg);
+}
+
+.clouds span:nth-child(2) {
+    position: absolute;
+    left: 80%;
+    top: -10%;
+    background: rgb(109, 109, 109);
+    height: 30px;
+    width: 5px;
+    transform: rotate(45deg);
+}
+
+
+@keyframes smoke {
+    0% {
+        transform: translate(40, 40) scale(1);
+        opacity: 1;
+        filter: blur(10px);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(4);
+        opacity: 1;
+        filter: blur(7px);
+    }
+
+    100% {
+        transform: translate(-80, -80) scale(1);
+        opacity: 1;
+        filter: blur(10px);
+    }
+
+}
