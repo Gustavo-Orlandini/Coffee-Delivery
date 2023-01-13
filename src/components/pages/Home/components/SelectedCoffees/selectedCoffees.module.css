@@ -86,3 +86,8 @@ input::-webkit-inner-spin-button {
     color: var(--base-subtitle);
 
 }
+
+hr {
+    color: var(--base-button);
+    border: 1px solid var(--base-button);
+}

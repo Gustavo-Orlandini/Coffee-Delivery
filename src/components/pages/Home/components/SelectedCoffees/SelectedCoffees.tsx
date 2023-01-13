@@ -1,6 +1,4 @@
 import styles from './selectedCoffees.module.css'
-
-import Latte from '../../../assets/cups/expresso-tradicional.svg'
 import ExpressoTradicional from '../../../../../assets/cups/expresso-tradicional.svg'
 import { Minus, Plus, Trash } from 'phosphor-react'
 

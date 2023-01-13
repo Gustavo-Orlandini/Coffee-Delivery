@@ -6,7 +6,6 @@ import styles from './checkout.module.css'
 
 export function Checkout() {
 
-
   return (
     <div className={styles.checkoutContainer}>
       <div>
