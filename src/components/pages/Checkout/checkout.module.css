@@ -1,3 +1,68 @@
-.title {
-    font-weight: bold;
+.checkoutContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.checkoutContainer h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.125;
+    color: var(--base-subtitle);
+}
+
+.addressinfo {
+    display: flex;
+}
+
+.addressinfo svg {
+    color: var(--yellow-dark);
+    margin-right: 0.5rem;
+}
+
+.addressinfo span {
+    color: var(--base-subtitle);
+}
+
+.addressinfo p {
+    color: var(--base-text);
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+}
+
+.userDataContainer {
+    background: var(--base-card);
+    width: 40rem;
+    padding: 40px;
+    border-radius: 8px;
+    margin-right: 2rem;
+}
+
+.datasFromUser {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.datasFromUser input {
+    background: var(--base-input);
+    border: 1px solid var(--base-button);
+    border-radius: 4px;
+    /* color: var(--base-label); */
+    height: 2.625rem;
+}
+
+.datasFromUser input::placeholder {
+    font-size: 0.875rem;
+    margin-left: 9px;
+    padding-left: 12px;
+}
+
+.datasFromUser2 {
+    display: flex;
+    gap: 16px;
+}
+
+.datasFromUser3 {
+    display: flex;
+    gap: 16px;
 }
