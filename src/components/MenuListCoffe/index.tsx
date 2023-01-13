@@ -18,6 +18,8 @@ export function MenuListCoffee() {
 
                         <div className={styles.card}>
 
+
+
                             <div className={styles.clouds}>
                                 <span></span>
                                 <span></span>
@@ -26,6 +28,7 @@ export function MenuListCoffee() {
                                     width: "7.5rem",
                                     height: "7.5rem",
                                     marginTop: "-1.25rem",
+
                                 }} alt="" />
                             </div>
 
@@ -63,8 +66,8 @@ export function MenuListCoffee() {
                                     <input type="number" />
                                     <button>+</button>
 
-                                    <div>
-                                        <ShoppingCart fill='' />
+                                    <div className={styles.addCoffeButton}>
+                                        <ShoppingCart size={22} weight="fill" />
                                     </div>
 
                                 </div>
