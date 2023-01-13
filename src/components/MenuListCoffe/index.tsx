@@ -2,8 +2,11 @@ import styles from './menuListCoffee.module.css'
 import { COFFEE_IMAGES } from '../../constants/coffeeImgs'
 import dados from '../../mocks/dados.json'
 import { ShoppingCart } from 'phosphor-react';
+import { useState } from 'react';
 
 export function MenuListCoffee() {
+    const [enableSmoke, setEnableSmoke] = useState('')
+    console.log(enableSmoke)
     return (
         <div className={styles.menuContainer}>
 
@@ -18,12 +21,14 @@ export function MenuListCoffee() {
 
                         <div className={styles.card}>
 
+                            <div onMouseEnter={() => setEnableSmoke(coffee.id)} onMouseOut={() => setEnableSmoke('')} className={styles.clouds}>
+                                {enableSmoke === coffee.id ? (
+                                    <>
+                                        <span></span>
+                                        <span></span>
+                                    </>
 
-
-                            <div className={styles.clouds}>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                ) : null}
                                 <img src={COFFEE_IMAGES[coffee.id as keyof typeof COFFEE_IMAGES]} style={{
                                     width: "7.5rem",
                                     height: "7.5rem",
