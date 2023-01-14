@@ -47,14 +47,14 @@
     background: var(--base-input);
     border: 1px solid var(--base-button);
     border-radius: 4px;
-    /* color: var(--base-label); */
     height: 2.625rem;
+    padding-left: 12px;
 }
 
 .datasFromUser input::placeholder {
     font-size: 0.875rem;
     margin-left: 9px;
-    padding-left: 12px;
+    color: var(--base-label);
 }
 
 .datasFromUser2 {
@@ -67,12 +67,26 @@
     gap: 16px;
 }
 
+/* detalhe de 2 placeholder no mesmo imput!! */
+.secondPlaceholderDetail {
+    position: relative;
+}
+
+.secondPlaceholderDetail::after {
+    content: attr(data-required);
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    font-size: 0.75rem;
+    transform: translateY(-50%);
+    color: var(--base-label);
+    font-style: italic;
+}
+
 /* _____________________________________________________ */
 .coffeeSelectedContainer {
-    /* display: flex; */
     background: var(--base-card);
     width: 28rem;
-    /* height: 21.125rem; */
     border-radius: 8px 44px;
     padding: 40px;
 }

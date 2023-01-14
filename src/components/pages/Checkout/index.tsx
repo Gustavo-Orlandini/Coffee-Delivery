@@ -29,7 +29,11 @@ export function Checkout() {
 
             <div className={styles.datasFromUser2}>
               <input style={{ width: "12.5rem" }} placeholder='Número' type="number" />
-              <input style={{ width: "21.75rem" }} placeholder='Complemento' type="text" />
+
+              <div className={styles.secondPlaceholderDetail} data-required='Opcional'>
+                <input id='demoTextBox' style={{ width: "21.75rem" }} placeholder='Complemento' type="text" />
+              </div>
+
             </div>
 
             <div className={styles.datasFromUser3}>
