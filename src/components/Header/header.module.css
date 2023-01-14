@@ -5,8 +5,10 @@
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;
+    /* margin-right: 2rem; */
     padding: 2rem 1rem;
     background: var(--background);
+    /* padding: 0 1rem; */
 
     /* codigo abaixo faz header estar fixado no scroll */
     position: sticky;

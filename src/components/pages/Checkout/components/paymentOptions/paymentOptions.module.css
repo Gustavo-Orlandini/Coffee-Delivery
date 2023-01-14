@@ -52,14 +52,15 @@
     padding: 1rem;
     gap: 6px;
     /* color: var(--purple-dark); */
-    transition: background-color 0.2s;
-    border: 0;
+    transition: 0.2s;
+    border: 1px solid transparent;
     cursor: pointer;
 
 }
 
 .typePaymentButton:hover {
-    background: var(--base-hover);
+    background: var(--purple-light);
+    border: 1px solid var(--purple-dark);
 
 }
 

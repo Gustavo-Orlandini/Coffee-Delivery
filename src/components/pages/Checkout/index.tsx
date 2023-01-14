@@ -47,7 +47,6 @@ export function Checkout() {
         <PaymentOptions />
       </div>
 
-
       <div className={styles.rightContainer}>
         <h3>Cafés selecionados</h3>
 

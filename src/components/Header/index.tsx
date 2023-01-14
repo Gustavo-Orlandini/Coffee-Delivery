@@ -7,7 +7,7 @@ import styles from './header.module.css'
 
 export function Header() {
   return (
-    <div className={styles.content}>
+    <header className={styles.content}>
 
       <NavLink to="/" title="Logo" >
         <img src={Logo} alt="Imagem da logomarca do Ignite" />
@@ -26,6 +26,6 @@ export function Header() {
         </NavLink>
       </div>
 
-    </div>
+    </header>
   )
 }
