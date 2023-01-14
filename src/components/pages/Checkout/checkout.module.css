@@ -60,6 +60,7 @@
 .datasFromUser2 {
     display: flex;
     gap: 16px;
+    width: 100%;
 }
 
 .datasFromUser3 {

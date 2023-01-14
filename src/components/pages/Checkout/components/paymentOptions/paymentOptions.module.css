@@ -1,0 +1,74 @@
+.paymentOptionsContainer {
+    width: 40rem;
+    background: var(--base-card);
+    margin-top: 0.75rem;
+    border-radius: 6px;
+    padding: 40px;
+    gap: 2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10rem;
+}
+
+.paymentOptionsContainer svg {
+    color: var(--purple);
+}
+
+.paymentInfo {
+    display: flex;
+}
+
+.paymentInfo svg {
+    margin-right: 0.5rem;
+}
+
+.paymentInfoTexts {
+    padding-top: 2px;
+}
+
+.paymentInfoTexts span {
+    color: var(--base-subtitle);
+}
+
+.paymentInfoTexts p {
+    color: var(--base-text);
+    margin-bottom: 2rem;
+    font-size: 0.875rem;
+    margin-top: 2px;
+}
+
+.optionsbuyButtonsContainer {
+    display: flex;
+    width: 35rem;
+    gap: 12px;
+}
+
+.typePaymentButton {
+    flex: 1;
+    display: flex;
+    background: var(--base-button);
+    border-radius: 6px;
+    /* margin-left: 0.5rem; */
+    align-items: center;
+    padding: 1rem;
+    gap: 6px;
+    /* color: var(--purple-dark); */
+    transition: background-color 0.2s;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.typePaymentButton:hover {
+    background: var(--base-hover);
+
+}
+
+.typePaymentButton span {
+    font-size: 0.75rem;
+    color: var(--base-text);
+
+}
+
+.typePaymentButton svg {
+    margin-left: 0.6rem;
+}

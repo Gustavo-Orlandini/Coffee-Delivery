@@ -1,7 +1,8 @@
 import { MapPinLine, Minus, Plus, Trash } from 'phosphor-react'
-import { ConfirmationSectionContainer } from '../Home/components/ConfirmationSectionContainer/ConfirmationSectionContainer'
-import { SelectedCoffee } from '../Home/components/SelectedCoffees/SelectedCoffees'
+import { ConfirmationSectionContainer } from './components/ConfirmationSectionContainer/ConfirmationSectionContainer'
+import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
 import styles from './checkout.module.css'
+import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
 
 
 
@@ -43,7 +44,9 @@ export function Checkout() {
             </div>
           </div>
         </div>
+        <PaymentOptions />
       </div>
+
 
       <div className={styles.rightContainer}>
         <h3>Cafés selecionados</h3>
