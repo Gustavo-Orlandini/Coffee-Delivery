@@ -25,9 +25,6 @@
     position: relative;
     flex-direction: column;
     gap: 2rem;
-    /* margin: 200px auto 0; */
-    /* width: 400px; */
-    /* height: 250px; */
     background: var(--white);
     border-radius: 6px 36px;
 }
@@ -44,4 +41,20 @@
     height: calc(100% + 2px);
     z-index: -1;
 
+}
+
+.envolt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.envolt span {
+    font-weight: 700;
+}
+
+.illustrationPicture {
+    margin-right: -20px;
 }

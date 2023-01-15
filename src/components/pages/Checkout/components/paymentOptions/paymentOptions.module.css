@@ -50,7 +50,7 @@
     align-items: center;
     padding: 1rem;
     gap: 6px;
-    transition: 0.2s;
+    transition: 0.3s;
     border: 1px solid transparent;
     cursor: pointer;
 
@@ -69,5 +69,5 @@
 }
 
 .typePaymentButton svg {
-    margin-left: 0.6rem;
+    margin-left: 0.5rem;
 }
