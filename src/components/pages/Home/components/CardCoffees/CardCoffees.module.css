@@ -7,13 +7,9 @@
     flex-direction: column;
     padding: 1.25rem;
     padding-top: 0;
-    /* position: absolute; */
     align-items: center;
     gap: 4px;
-    /* margin-top: 1rem; */
     margin-bottom: 1.25rem;
-    /* align-content: flex-start; */
-    /* position: relative; */
 }
 
 .tags {
@@ -23,7 +19,6 @@
     gap: 4px;
     margin-top: 6.75rem;
     margin-bottom: 1rem;
-    /* position: relative; */
 }
 
 .card h3 {
@@ -46,7 +41,6 @@
     align-items: center;
     justify-content: space-between;
     width: 14rem;
-    /* width: 100%; */
     margin-bottom: 1.375rem;
 
 }
@@ -79,7 +73,6 @@
 
 .quantityContainer {
     display: flex;
-    /* gap: 8px; */
     background: var(--base-button);
     border-radius: 6px;
     width: 5.5rem;
@@ -102,7 +95,6 @@
 .quantityContainer input {
     background: var(--base-button);
     border: 0;
-    /* background: transparent; */
     width: 30px;
     font-size: 1rem;
     align-items: center;
@@ -118,7 +110,7 @@ input::-webkit-inner-spin-button {
 .addCoffeButton {
     background: var(--purple-dark);
     border-radius: 6px;
-    /* width: 2.375rem; */
+    cursor: pointer;
     height: 2.375rem;
     padding: 8px;
     color: var(--white);

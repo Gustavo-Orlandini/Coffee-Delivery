@@ -21,7 +21,6 @@
     width: 4.5rem;
     background: var(--base-button);
     border-radius: 6px;
-    /* align-self: center; */
     height: 2rem;
 }
 
@@ -47,7 +46,6 @@
 .quantityContainer input {
     background: var(--base-button);
     border: 0;
-    /* background: transparent; */
     width: 30px;
     font-size: 1rem;
     align-items: center;

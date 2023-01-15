@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1120px;
-    width: 100%;
+    /* max-width: 1120px; */
+    /* width: 100%; */
     margin: 0 auto;
     /* margin-right: 2rem; */
-    padding: 2rem 1rem;
+    padding: 2rem 14rem;
+    /* gap: 820px; */
     background: var(--background);
-    /* padding: 0 1rem; */
+    position: absolute;
 
     /* codigo abaixo faz header estar fixado no scroll */
     position: sticky;
