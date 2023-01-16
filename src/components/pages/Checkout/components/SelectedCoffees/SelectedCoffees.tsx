@@ -1,17 +1,23 @@
 import styles from './selectedCoffees.module.css'
-import ExpressoTradicional from '../../../../../assets/cups/expresso-tradicional.svg'
 import { Minus, Plus, Trash } from 'phosphor-react'
 
-export function SelectedCoffee() {
+
+interface SelectedCoffee {
+    coffeeImg: string,
+    coffeeTitle: string,
+    price: number | string,
+}
+
+export function SelectedCoffee(props: SelectedCoffee) {
     return (
         <>
             <div className={styles.checkoutContainer}>
 
                 <div className={styles.chosenCoffeeContainer}>
-                    <img src={ExpressoTradicional} alt="" />
+                    <img src={props.coffeeImg} alt="" />
 
                     <div>
-                        <p>Expresso Tradicional</p>
+                        <p>{props.coffeeTitle}</p>
 
                         <div className={styles.itemActions}>
 
@@ -33,7 +39,7 @@ export function SelectedCoffee() {
                         fontWeight: 700,
                         marginLeft: 'auto',
                         alignSelf: 'baseline'
-                    }}>R$ 9,90</span>
+                    }}>{props.price}</span>
 
 
                 </div>

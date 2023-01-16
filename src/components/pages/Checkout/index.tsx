@@ -1,9 +1,11 @@
-import { MapPinLine, Minus, Plus, Trash } from 'phosphor-react'
+import { MapPinLine } from 'phosphor-react'
 import { ConfirmationSectionContainer } from './components/ConfirmationSectionContainer/ConfirmationSectionContainer'
 import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
 import styles from './checkout.module.css'
 import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
-import { ContentWrapper } from '../../ContentWrapper'
+import ExpressoTradicional from '../../../assets/cups/expresso-tradicional.svg'
+import Latte from '../../../assets/cups/latte.svg'
+
 
 
 
@@ -56,8 +58,8 @@ export function Checkout() {
         <h3>Cafés selecionados</h3>
 
         <div className={styles.coffeeSelectedContainer}>
-          <SelectedCoffee />
-          <SelectedCoffee />
+          <SelectedCoffee coffeeImg={ExpressoTradicional} coffeeTitle='Expresso Tradicional' price='R$ 9,90' />
+          <SelectedCoffee coffeeImg={Latte} coffeeTitle='Latte' price='R$ 13,90' />
 
           <ConfirmationSectionContainer />
         </div>
