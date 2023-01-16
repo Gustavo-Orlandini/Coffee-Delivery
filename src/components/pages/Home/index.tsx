@@ -3,7 +3,6 @@ import MainImg from '../../../assets/main-img.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { MenuListCoffee } from '../../MenuListCoffe'
 import { Feature } from './components/Features/Feature'
-import backgroundImage from '../../../assets/Background.svg'
 
 export function Home() {
   return (

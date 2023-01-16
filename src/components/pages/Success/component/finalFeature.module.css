@@ -1,0 +1,11 @@
+.envolt {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-bottom: 0.5rem;
+}
+
+.envolt span {
+    font-weight: 700;
+}
