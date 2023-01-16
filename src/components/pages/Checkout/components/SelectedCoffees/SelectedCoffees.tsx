@@ -1,5 +1,7 @@
 import styles from './selectedCoffees.module.css'
 import { Minus, Plus, Trash } from 'phosphor-react'
+import { MinusAndPlusButtonLARGE } from '../MinusAndPlusButton/MinusAndPlusButtonLARGE'
+import { MinusAndPlussButtonSMALL } from '../MinusAndPlusButton/MinusAndPlusButtonSMALL'
 
 
 interface SelectedCoffee {
@@ -21,12 +23,7 @@ export function SelectedCoffee(props: SelectedCoffee) {
 
                         <div className={styles.itemActions}>
 
-
-                            <div title='Adicione a quantidade desejada' className={styles.quantityContainer}>
-                                <button><Minus size={14} /></button>
-                                <input type="number" value="1" />
-                                <button><Plus size={14} /></button>
-                            </div>
+                            <MinusAndPlussButtonSMALL />
 
                             <button className={styles.removeButton}>
                                 <Trash size={16} />

@@ -1,6 +1,7 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react';
 import { useState } from 'react';
 import { COFFEE_IMAGES } from '../../../../../constants/coffeeImgs';
+import { MinusAndPlusButtonLARGE } from '../../../Checkout/components/MinusAndPlusButton/MinusAndPlusButtonLARGE';
 
 import styles from './CardCoffees.module.css'
 
@@ -70,11 +71,7 @@ export function CardCoffee(props: CardCoffeeProps) {
 
                 <div className={styles.footerRightContainer}>
 
-                    <div title='Adicione a quantidade desejada' className={styles.quantityContainer}>
-                        <button><Minus /></button>
-                        <input type="number" value="1" />
-                        <button><Plus /></button>
-                    </div>
+                    <MinusAndPlusButtonLARGE />
 
                     <div title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
                         <ShoppingCart size={22} weight="fill" />

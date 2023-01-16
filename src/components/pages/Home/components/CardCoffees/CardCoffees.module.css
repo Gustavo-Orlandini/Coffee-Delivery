@@ -71,41 +71,7 @@
     font-size: 1.6rem;
 }
 
-.quantityContainer {
-    display: flex;
-    background: var(--base-button);
-    border-radius: 6px;
-    width: 5.5rem;
-    height: 2.375rem;
-}
 
-.quantityContainer button {
-    border: 0;
-    width: 30px;
-    border-radius: 6px;
-    background: transparent;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    color: var(--purple-dark);
-
-}
-
-.quantityContainer input {
-    background: var(--base-button);
-    border: 0;
-    width: 30px;
-    font-size: 1rem;
-    align-items: center;
-    text-align: center;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
 .addCoffeButton {
     background: var(--purple-dark);
