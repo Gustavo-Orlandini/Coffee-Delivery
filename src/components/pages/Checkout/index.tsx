@@ -3,13 +3,15 @@ import { ConfirmationSectionContainer } from './components/ConfirmationSectionCo
 import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
 import styles from './checkout.module.css'
 import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
-import ExpressoTradicional from '../../../assets/cups/expresso-tradicional.svg'
-import Latte from '../../../assets/cups/latte.svg'
+import { CoffeeContext } from '../../../contexts/CoffeeContext'
+import { useContext } from 'react'
+import { formatPrice } from '../../../utils/FormatPrice'
 
 
 
 
 export function Checkout() {
+  const { coffeeList } = useContext(CoffeeContext);
 
   return (
 
@@ -58,8 +60,14 @@ export function Checkout() {
         <h3>Cafés selecionados</h3>
 
         <div className={styles.coffeeSelectedContainer}>
-          <SelectedCoffee coffeeImg={ExpressoTradicional} coffeeTitle='Expresso Tradicional' price='R$ 9,90' />
-          <SelectedCoffee coffeeImg={Latte} coffeeTitle='Latte' price='R$ 13,90' />
+          {coffeeList.map(i => {
+
+            return (
+              <SelectedCoffee coffeeImg={i.coffeeImg} coffeeTitle={i.coffeeTitle} price={formatPrice(i.price * i.quantity)} />
+
+            )
+          })}
+
 
           <ConfirmationSectionContainer />
         </div>

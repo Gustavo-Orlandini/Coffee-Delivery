@@ -1,6 +1,8 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react';
-import { useState } from 'react';
+import { ShoppingCart } from 'phosphor-react';
+import { useContext, useState } from 'react';
 import { COFFEE_IMAGES } from '../../../../../constants/coffeeImgs';
+import { CoffeeContext } from '../../../../../contexts/CoffeeContext';
+import { formatPrice } from '../../../../../utils/FormatPrice';
 import { MinusAndPlusButtonLARGE } from '../../../Checkout/components/MinusAndPlusButton/MinusAndPlusButtonLARGE';
 
 import styles from './CardCoffees.module.css'
@@ -18,14 +20,17 @@ interface CardCoffeeProps {
 
 export function CardCoffee(props: CardCoffeeProps) {
     const [enableSmoke, setEnableSmoke] = useState('')
-    const [price, setPrice] = useState<number>(1)
+    const [quantity, setQuantity] = useState<number>(1)
+    const atualPrice = formatPrice(props.coffee.price * quantity)
+    const { addCoffee } = useContext(CoffeeContext)
 
 
     return (
 
         <div className={styles.card}>
 
-            <div onMouseEnter={() => setEnableSmoke(props.coffee.id)} onMouseOut={() => setEnableSmoke('')} className={styles.clouds}>
+            <div onMouseEnter={() => setEnableSmoke(props.coffee.id)}
+                onMouseOut={() => setEnableSmoke('')} className={styles.clouds}>
                 {enableSmoke === props.coffee.id ? (
                     <>
                         <span></span>
@@ -68,16 +73,23 @@ export function CardCoffee(props: CardCoffeeProps) {
 
                 <div className={styles.priceContainer}>
                     <p>R$</p>
-                    <h3>{new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(props.coffee.price * price)}</h3>
+                    <h3>{atualPrice}
+                    </h3>
                 </div>
 
                 <div className={styles.footerRightContainer}>
 
-                    <MinusAndPlusButtonLARGE getPrice={setPrice} />
+                    <MinusAndPlusButtonLARGE getPrice={setQuantity} />
 
-                    <div title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
+                    <button onClick={() => addCoffee({
+                        id: props.coffee.id,
+                        coffeeImg: COFFEE_IMAGES[props.coffee.id as keyof typeof COFFEE_IMAGES],
+                        coffeeTitle: props.coffee.title,
+                        price: props.coffee.price,
+                        quantity: quantity
+                    })} title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
                         <ShoppingCart size={22} weight="fill" />
-                    </div>
+                    </button>
                 </div>
 
 
