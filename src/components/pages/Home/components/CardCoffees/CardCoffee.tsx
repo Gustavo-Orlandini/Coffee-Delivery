@@ -18,7 +18,9 @@ interface CardCoffeeProps {
 
 export function CardCoffee(props: CardCoffeeProps) {
     const [enableSmoke, setEnableSmoke] = useState('')
-    const [value, setValue] = useState('')
+    const [price, setPrice] = useState<number>(1)
+
+
     return (
 
         <div className={styles.card}>
@@ -66,12 +68,12 @@ export function CardCoffee(props: CardCoffeeProps) {
 
                 <div className={styles.priceContainer}>
                     <p>R$</p>
-                    <h3>{new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(props.coffee.price)}</h3>
+                    <h3>{new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2 }).format(props.coffee.price * price)}</h3>
                 </div>
 
                 <div className={styles.footerRightContainer}>
 
-                    <MinusAndPlusButtonLARGE />
+                    <MinusAndPlusButtonLARGE getPrice={setPrice} />
 
                     <div title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
                         <ShoppingCart size={22} weight="fill" />

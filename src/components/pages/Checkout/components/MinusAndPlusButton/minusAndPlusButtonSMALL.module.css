@@ -15,6 +15,7 @@
     text-align: center;
     display: flex;
     color: var(--purple-dark);
+    z-index: 1;
 }
 
 .quantityContainer button:first-child {
