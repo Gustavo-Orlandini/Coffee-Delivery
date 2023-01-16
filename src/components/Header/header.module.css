@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 1120px; */
-    /* width: 100%; */
+    max-width: 1120px;
+    width: 100%;
     margin: 0 auto;
     /* margin-right: 2rem; */
-    padding: 2rem 14rem;
+    padding: 2rem 1rem;
     /* gap: 820px; */
     background: var(--background);
     position: absolute;

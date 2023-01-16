@@ -3,14 +3,17 @@ import { ConfirmationSectionContainer } from './components/ConfirmationSectionCo
 import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
 import styles from './checkout.module.css'
 import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
+import { ContentWrapper } from '../../ContentWrapper'
 
 
 
 export function Checkout() {
 
   return (
-    <div className={styles.checkoutContainer}>
-      <div>
+
+    <div className={styles.allContainers}>
+
+      <div className={styles.leftContainer}>
         <h3>Complete seu pedido</h3>
 
         <div className={styles.userDataContainer}>
@@ -45,8 +48,10 @@ export function Checkout() {
           </div>
         </div>
         <PaymentOptions />
-      </div>
 
+
+
+      </div>
       <div className={styles.rightContainer}>
         <h3>Cafés selecionados</h3>
 
@@ -57,7 +62,7 @@ export function Checkout() {
           <ConfirmationSectionContainer />
         </div>
       </div>
-
     </div>
+
   )
 }

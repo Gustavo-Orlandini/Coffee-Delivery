@@ -1,10 +1,18 @@
-.checkoutContainer {
+.allContainers {
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3rem;
+    gap: 2rem;
 }
 
-.checkoutContainer h3 {
-    margin-top: 2.5rem;
+.leftContainer {
+    /* display: flex; */
+    justify-content: flex-start;
+    flex: 3;
+}
+
+.leftContainer h3 {
+    /* margin-top: 2.5rem; */
     margin-bottom: 1rem;
     font-size: 1.125;
     color: var(--base-subtitle);
@@ -31,10 +39,10 @@
 
 .userDataContainer {
     background: var(--base-card);
-    width: 40rem;
+    /* width: 40rem; */
     padding: 40px;
     border-radius: 8px;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 .datasFromUser {
@@ -87,7 +95,15 @@
 /* _____________________________________________________ */
 .coffeeSelectedContainer {
     background: var(--base-card);
-    width: 28rem;
+    /* width: 28rem; */
     border-radius: 8px 44px;
     padding: 40px;
+}
+
+.rightContainer {
+    flex: 2;
+}
+
+.rightContainer h3 {
+    margin-bottom: 1rem;
 }

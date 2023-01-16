@@ -1,5 +1,5 @@
 .paymentOptionsContainer {
-    width: 40rem;
+    width: 100%;
     background: var(--base-card);
     margin-top: 0.75rem;
     border-radius: 6px;
