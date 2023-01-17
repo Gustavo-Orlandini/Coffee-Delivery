@@ -14,6 +14,7 @@ interface CoffeeContextProps {
     addCoffee: (param: CoffeeItem) => void;
     updateCoffeeQuantity: (id: string, newQuantity: number) => void,
     removeCoffee: (id: string) => void,
+    resetCoffeList: () => void,
 }
 
 export const CoffeeContext = createContext<CoffeeContextProps>({
@@ -21,6 +22,7 @@ export const CoffeeContext = createContext<CoffeeContextProps>({
     addCoffee: () => undefined,
     updateCoffeeQuantity: () => undefined,
     removeCoffee: () => undefined,
+    resetCoffeList: () => undefined,
 });
 
 interface CoffeeContextProviderProps {
@@ -49,12 +51,17 @@ export function CoffeeContextProvider(props: CoffeeContextProviderProps) {
         setCoffeeList(coffeeToDelete)
     }
 
+    function resetCoffeList() {
+        setCoffeeList([])
+    }
+
     return (
         <CoffeeContext.Provider value={{
             coffeeList,
             addCoffee: (param: CoffeeItem) => setCoffeeList([...coffeeList, param]),
             updateCoffeeQuantity: updateCoffeeQuantity,
             removeCoffee: removeCoffee,
+            resetCoffeList: resetCoffeList,
 
         }}>
             {props.children}

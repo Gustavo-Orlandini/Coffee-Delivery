@@ -1,11 +1,11 @@
 import { MapPinLine } from 'phosphor-react'
 import { ConfirmationSectionContainer } from './components/ConfirmationSectionContainer/ConfirmationSectionContainer'
 import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
-import styles from './checkout.module.css'
 import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
 import { CoffeeContext } from '../../../contexts/CoffeeContext'
 import { useContext } from 'react'
 import { formatPrice } from '../../../utils/FormatPrice'
+import styles from './checkout.module.css'
 
 
 
@@ -31,8 +31,10 @@ export function Checkout() {
           </div>
 
 
-          <div className={styles.datasFromUser}>
-            <input style={{ width: "12.5rem" }} placeholder='CEP' type="number" />
+          <form className={styles.datasFromUser}>
+            <input style={{ width: "12.5rem" }}
+              placeholder='CEP'
+              type="number" />
             <input placeholder='Rua' type="text" />
 
             <div className={styles.datasFromUser2}>
@@ -49,7 +51,7 @@ export function Checkout() {
               <input style={{ width: "17.25rem" }} placeholder='Cidade' type="text" />
               <input style={{ width: "3.75rem" }} placeholder='UF' type="text" />
             </div>
-          </div>
+          </form>
         </div>
         <PaymentOptions />
 

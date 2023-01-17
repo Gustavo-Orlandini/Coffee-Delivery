@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import styles from './confirmationSectionContainer.module.css'
-import { CoffeeContext, CoffeeItem } from '../../../../../contexts/CoffeeContext';
+import { CoffeeContext } from '../../../../../contexts/CoffeeContext';
 import { useContext } from 'react';
 import { formatPrice, formatPriceCurrencyNULL } from '../../../../../utils/FormatPrice'
 
 
 export function ConfirmationSectionContainer() {
-    const { coffeeList } = useContext(CoffeeContext)
+    const { coffeeList, resetCoffeList } = useContext(CoffeeContext)
     const deliveryFee = 3.5
     const sumCoffees = coffeeList.reduce((acc, curr) => {
         return acc + curr.quantity * curr.price
@@ -35,7 +35,7 @@ export function ConfirmationSectionContainer() {
             <NavLink to='/success' title='Success'>
 
                 <div className={styles.confirmButton}>
-                    <button>CONFIRMAR PEDIDO</button>
+                    <button onClick={resetCoffeList}>CONFIRMAR PEDIDO</button>
 
                 </div>
             </NavLink>
