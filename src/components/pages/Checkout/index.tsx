@@ -63,7 +63,7 @@ export function Checkout() {
           {coffeeList.map(i => {
 
             return (
-              <SelectedCoffee coffeeImg={i.coffeeImg} coffeeTitle={i.coffeeTitle} price={formatPrice(i.price * i.quantity)} />
+              <SelectedCoffee key={i.id} id={i.id} quantity={i.quantity} coffeeImg={i.coffeeImg} coffeeTitle={i.coffeeTitle} price={formatPrice(i.price * i.quantity)} />
 
             )
           })}

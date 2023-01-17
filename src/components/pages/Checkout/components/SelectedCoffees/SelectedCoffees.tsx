@@ -1,16 +1,28 @@
 import styles from './selectedCoffees.module.css'
-import { Minus, Plus, Trash } from 'phosphor-react'
-import { MinusAndPlusButtonLARGE } from '../MinusAndPlusButton/MinusAndPlusButtonLARGE'
+import { Trash } from 'phosphor-react'
 import { MinusAndPlussButtonSMALL } from '../MinusAndPlusButton/MinusAndPlusButtonSMALL'
+import { useContext } from 'react'
+import { CoffeeContext } from '../../../../../contexts/CoffeeContext'
 
 
 interface SelectedCoffee {
+    id: string,
     coffeeImg: string,
     coffeeTitle: string,
     price: number | string,
+    quantity: number,
+
 }
 
 export function SelectedCoffee(props: SelectedCoffee) {
+    const { updateCoffeeQuantity, removeCoffee } = useContext(CoffeeContext)
+
+    function onPlusOrMinusClick(value: number) {
+        updateCoffeeQuantity(props.id, value)
+
+    }
+
+
     return (
         <>
             <div className={styles.checkoutContainer}>
@@ -23,9 +35,9 @@ export function SelectedCoffee(props: SelectedCoffee) {
 
                         <div className={styles.itemActions}>
 
-                            <MinusAndPlussButtonSMALL />
+                            <MinusAndPlussButtonSMALL onMinusClick={onPlusOrMinusClick} onPlusClick={onPlusOrMinusClick} minQuantity={1} maxQuantity={10} initialValue={props.quantity} />
 
-                            <button className={styles.removeButton}>
+                            <button onClick={() => removeCoffee(props.id)} className={styles.removeButton}>
                                 <Trash size={16} />
                                 <span>REMOVER</span>
                             </button>

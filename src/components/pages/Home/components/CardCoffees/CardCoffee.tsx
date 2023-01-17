@@ -2,7 +2,7 @@ import { ShoppingCart } from 'phosphor-react';
 import { useContext, useState } from 'react';
 import { COFFEE_IMAGES } from '../../../../../constants/coffeeImgs';
 import { CoffeeContext } from '../../../../../contexts/CoffeeContext';
-import { formatPrice } from '../../../../../utils/FormatPrice';
+import { formatPriceCurrencyNULL } from '../../../../../utils/FormatPrice';
 import { MinusAndPlusButtonLARGE } from '../../../Checkout/components/MinusAndPlusButton/MinusAndPlusButtonLARGE';
 
 import styles from './CardCoffees.module.css'
@@ -21,7 +21,7 @@ interface CardCoffeeProps {
 export function CardCoffee(props: CardCoffeeProps) {
     const [enableSmoke, setEnableSmoke] = useState('')
     const [quantity, setQuantity] = useState<number>(1)
-    const atualPrice = formatPrice(props.coffee.price * quantity)
+    const atualPrice = formatPriceCurrencyNULL(props.coffee.price * quantity)
     const { addCoffee } = useContext(CoffeeContext)
 
 
@@ -79,7 +79,7 @@ export function CardCoffee(props: CardCoffeeProps) {
 
                 <div className={styles.footerRightContainer}>
 
-                    <MinusAndPlusButtonLARGE getPrice={setQuantity} />
+                    <MinusAndPlusButtonLARGE initialValue={1} maxQuantity={10} minQuantity={1} getPrice={setQuantity} />
 
                     <button onClick={() => addCoffee({
                         id: props.coffee.id,

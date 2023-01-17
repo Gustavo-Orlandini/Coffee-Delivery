@@ -2,22 +2,37 @@ import { Minus, Plus } from 'phosphor-react'
 import { useState } from 'react'
 import styles from './minusAndPlusButtonSMALL.module.css'
 
-export function MinusAndPlussButtonSMALL() {
-    const [plus, setPlus] = useState<number>(1)
+interface MinusAndPlussButtonSMALLProps {
+    initialValue: number,
+    maxQuantity: number,
+    minQuantity: number,
+    onPlusClick?: (value: number) => void,
+    onMinusClick?: (value: number) => void,
+
+}
+
+export function MinusAndPlussButtonSMALL(props: MinusAndPlussButtonSMALLProps) {
+    const [value, setValue] = useState<number>(props.initialValue)
 
     function handlePlus() {
-        plus >= 10 ? '' : setPlus(plus + 1)
+        value >= props.maxQuantity ? '' : setValue(value + 1)
+        if (props.onPlusClick) {
+            props.onPlusClick(value + 1)
+        }
     }
 
     function handleMinus() {
-        plus <= 1 ? '' : setPlus(plus - 1)
+        value <= props.minQuantity ? '' : setValue(value - 1)
+        if (props.onMinusClick) {
+            props.onMinusClick(value - 1)
+        }
     }
 
 
     return (
         <div title='Adicione a quantidade desejada' className={styles.quantityContainer}>
             <button onClick={() => handleMinus()} ><Minus size={14} /></button>
-            <input type="number" value={plus} />
+            <input type="number" value={value} />
             <button onClick={() => handlePlus()} ><Plus size={14} /></button>
         </div>
     )
