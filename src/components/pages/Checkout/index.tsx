@@ -11,6 +11,7 @@ import { FormContext } from '../../../contexts/FormContext'
 
 
 
+
 export function Checkout() {
   const { coffeeList } = useContext(CoffeeContext);
   const { cep, rua, numero, complemento, bairro, cidade, uf, setCep,
@@ -25,14 +26,6 @@ export function Checkout() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-
-    setCep(cep)
-    setRua(rua)
-    setNumero(numero)
-    setComplemento(complemento)
-    setBairro(bairro)
-    setCidade(cidade)
-    setUf(uf)
   }
 
   return (
@@ -77,7 +70,7 @@ export function Checkout() {
                 placeholder='Número'
                 type="number" />
 
-              <div className={styles.secondPlaceholderDetail} data-required='Opcional'>
+              <div className={styles.secondPlaceholderDetail} data-required={complemento.length === 0 ? 'Opcional' : ''}>
                 <input
                   value={complemento}
                   onChange={(e) => setComplemento(e.target.value)}
@@ -95,7 +88,7 @@ export function Checkout() {
                 onChange={(e) => setBairro(e.target.value)}
                 style={{ width: "12.5rem" }}
                 placeholder='Bairro'
-                type="number" />
+                type="text" />
               <input
                 value={cidade}
                 id=''
@@ -125,7 +118,13 @@ export function Checkout() {
           {coffeeList.map(i => {
 
             return (
-              <SelectedCoffee key={i.id} id={i.id} quantity={i.quantity} coffeeImg={i.coffeeImg} coffeeTitle={i.coffeeTitle} price={formatPrice(i.price * i.quantity)} />
+              <SelectedCoffee
+                key={i.id}
+                id={i.id}
+                quantity={i.quantity}
+                coffeeImg={i.coffeeImg}
+                coffeeTitle={i.coffeeTitle}
+                price={formatPrice(i.price * i.quantity)} />
 
             )
           })}

@@ -2,6 +2,7 @@
 import Logo from '../../assets/logo-header.svg'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 import styles from './header.module.css'
 import { useContext } from 'react'
@@ -29,7 +30,17 @@ export function Header() {
         <NavLink
           onClick={() => {
             if (emptyListaCoffee)
-              window.alert('Para ir ao carrinho de compras, você deve primeiro adicionar algum ítem abaixo!')
+
+              toast.warn('Para ir ao carrinho de compras, você deve primeiro adicionar algum ítem abaixo!', {
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+              });
           }}
           to={emptyListaCoffee ? '' : '/checkout'}
           title="Clique para ir ao carrinho de compras">

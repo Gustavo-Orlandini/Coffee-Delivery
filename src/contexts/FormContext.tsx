@@ -15,10 +15,6 @@ interface FormContextProps {
 
     paymentMethod: string,
 
-    // credCard: string,
-    // debitCard: string,
-    // money: string,
-
     setCep: (cep: string) => void,
     setRua: (rua: string) => void,
     setNumero: (numero: string) => void,
@@ -29,9 +25,9 @@ interface FormContextProps {
 
     setPaymentMethod: (method: string) => void,
 
-    // setCredCard: (credCard: string) => void,
-    // setDebitCard: (debitCard: string) => void,
-    // setMoney: (money: string) => void,
+    resetForm: () => void,
+
+
 }
 
 export const FormContext = createContext<FormContextProps>({
@@ -44,12 +40,9 @@ export const FormContext = createContext<FormContextProps>({
     uf: '',
 
     paymentMethod: '',
-    // credCard: '',
-    // debitCard: '',
-    // money: '',
 
-    setCep: () => undefined,
     setRua: () => undefined,
+    setCep: () => undefined,
     setNumero: () => undefined,
     setComplemento: () => undefined,
     setBairro: () => undefined,
@@ -58,9 +51,7 @@ export const FormContext = createContext<FormContextProps>({
 
     setPaymentMethod: () => undefined,
 
-    // setCredCard: () => undefined,
-    // setDebitCard: () => undefined,
-    // setMoney: () => undefined,
+    resetForm: () => undefined,
 
 })
 
@@ -74,6 +65,16 @@ export function FormContextProvider(props: FormContextProviderProps) {
     const [uf, setUf] = useState('')
 
     const [paymentMethod, setPaymentMethod] = useState('')
+
+    function resetForm() {
+        setRua('')
+        setCep('')
+        setNumero('')
+        setComplemento('')
+        setBairro('')
+        setCidade('')
+        setUf('')
+    }
 
     return (
         <FormContext.Provider value={{
@@ -96,6 +97,8 @@ export function FormContextProvider(props: FormContextProviderProps) {
             setUf,
 
             setPaymentMethod,
+
+            resetForm,
         }}>
             {props.children}
         </FormContext.Provider>

@@ -4,6 +4,7 @@ import { COFFEE_IMAGES } from '../../../../../constants/coffeeImgs';
 import { CoffeeContext } from '../../../../../contexts/CoffeeContext';
 import { formatPriceCurrencyNULL } from '../../../../../utils/FormatPrice';
 import { MinusAndPlusButtonLARGE } from '../../../Checkout/components/MinusAndPlusButton/MinusAndPlusButtonLARGE';
+import { toast } from 'react-toastify';
 
 import styles from './CardCoffees.module.css'
 
@@ -22,7 +23,22 @@ export function CardCoffee(props: CardCoffeeProps) {
     const [enableSmoke, setEnableSmoke] = useState('')
     const [quantity, setQuantity] = useState<number>(1)
     const atualPrice = formatPriceCurrencyNULL(props.coffee.price * quantity)
-    const { addCoffee } = useContext(CoffeeContext)
+    const { addCoffee, coffeeList } = useContext(CoffeeContext)
+
+    // function onAddCoffee() {
+    //     if (coffeeList.length > 0) {
+    //         toast.success('🦄 Wow so easy!', {
+    //             position: "top-center",
+    //             autoClose: 5000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "colored",
+    //         });
+    //     }
+    // }
 
 
     return (
@@ -87,9 +103,15 @@ export function CardCoffee(props: CardCoffeeProps) {
                         coffeeTitle: props.coffee.title,
                         price: props.coffee.price,
                         quantity: quantity
-                    })} title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
+                    })
+
+                    }
+                        title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
                         <ShoppingCart size={22} weight="fill" />
+
                     </button>
+
+
                 </div>
 
 

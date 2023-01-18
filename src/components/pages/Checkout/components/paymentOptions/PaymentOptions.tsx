@@ -6,10 +6,6 @@ import { useContext } from 'react';
 export function PaymentOptions() {
     const { paymentMethod, setPaymentMethod } = useContext(FormContext);
 
-
-    console.log(paymentMethod)
-
-
     return (
         <div className={styles.paymentOptionsContainer}>
             <div className={styles.paymentInfo}>
