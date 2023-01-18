@@ -31,7 +31,6 @@ interface CoffeeContextProviderProps {
 
 export function CoffeeContextProvider(props: CoffeeContextProviderProps) {
     const [coffeeList, setCoffeeList] = useState<CoffeeItem[]>([]);
-    console.log(coffeeList)
 
     function updateCoffeeQuantity(id: string, newQuantity: number) {
         const newCoffeeList = coffeeList.map((coffee) => {

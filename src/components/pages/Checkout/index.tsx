@@ -3,15 +3,37 @@ import { ConfirmationSectionContainer } from './components/ConfirmationSectionCo
 import { SelectedCoffee } from './components/SelectedCoffees/SelectedCoffees'
 import { PaymentOptions } from './components/paymentOptions/PaymentOptions'
 import { CoffeeContext } from '../../../contexts/CoffeeContext'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { formatPrice } from '../../../utils/FormatPrice'
 import styles from './checkout.module.css'
+import { FormContext } from '../../../contexts/FormContext'
 
 
 
 
 export function Checkout() {
   const { coffeeList } = useContext(CoffeeContext);
+  const { cep, rua, numero, complemento, bairro, cidade, uf, setCep,
+    setRua,
+    setNumero,
+    setComplemento,
+    setBairro,
+    setCidade,
+    setUf } = useContext(FormContext);
+
+
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+
+    setCep(cep)
+    setRua(rua)
+    setNumero(numero)
+    setComplemento(complemento)
+    setBairro(bairro)
+    setCidade(cidade)
+    setUf(uf)
+  }
 
   return (
 
@@ -31,25 +53,63 @@ export function Checkout() {
           </div>
 
 
-          <form className={styles.datasFromUser}>
-            <input style={{ width: "12.5rem" }}
+          <form onSubmit={handleSubmit} className={styles.datasFromUser}>
+            <input
+              value={cep}
+              id=''
+              onChange={(e) => setCep(e.target.value)}
+              style={{ width: "12.5rem" }}
               placeholder='CEP'
               type="number" />
-            <input placeholder='Rua' type="text" />
+            <input
+              value={rua}
+              id=''
+              onChange={(e) => setRua(e.target.value)}
+              placeholder='Rua'
+              type="text" />
 
             <div className={styles.datasFromUser2}>
-              <input style={{ width: "12.5rem" }} placeholder='Número' type="number" />
+              <input
+                value={numero}
+                id=''
+                onChange={(e) => setNumero(e.target.value)}
+                style={{ width: "12.5rem" }}
+                placeholder='Número'
+                type="number" />
 
               <div className={styles.secondPlaceholderDetail} data-required='Opcional'>
-                <input id='demoTextBox' style={{ width: "21.75rem" }} placeholder='Complemento' type="text" />
+                <input
+                  value={complemento}
+                  onChange={(e) => setComplemento(e.target.value)}
+                  id='demoTextBox' style={{ width: "21.75rem" }}
+                  placeholder='Complemento'
+                  type="text" />
               </div>
 
             </div>
 
             <div className={styles.datasFromUser3}>
-              <input style={{ width: "12.5rem" }} placeholder='Bairro' type="number" />
-              <input style={{ width: "17.25rem" }} placeholder='Cidade' type="text" />
-              <input style={{ width: "3.75rem" }} placeholder='UF' type="text" />
+              <input
+                value={bairro}
+                id=''
+                onChange={(e) => setBairro(e.target.value)}
+                style={{ width: "12.5rem" }}
+                placeholder='Bairro'
+                type="number" />
+              <input
+                value={cidade}
+                id=''
+                onChange={(e) => setCidade(e.target.value)}
+                style={{ width: "17.25rem" }}
+                placeholder='Cidade'
+                type="text" />
+              <input
+                value={uf}
+                id=''
+                onChange={(e) => setUf(e.target.value)}
+                style={{ width: "3.75rem" }}
+                placeholder='UF'
+                type="text" />
             </div>
           </form>
         </div>
