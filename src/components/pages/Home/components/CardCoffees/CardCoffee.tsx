@@ -25,20 +25,27 @@ export function CardCoffee(props: CardCoffeeProps) {
     const atualPrice = formatPriceCurrencyNULL(props.coffee.price * quantity)
     const { addCoffee, coffeeList } = useContext(CoffeeContext)
 
-    // function onAddCoffee() {
-    //     if (coffeeList.length > 0) {
-    //         toast.success('🦄 Wow so easy!', {
-    //             position: "top-center",
-    //             autoClose: 5000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
-    //             theme: "colored",
-    //         });
-    //     }
-    // }
+    const onAddCoffee = () => {
+
+        addCoffee({
+            id: props.coffee.id,
+            coffeeImg: COFFEE_IMAGES[props.coffee.id as keyof typeof COFFEE_IMAGES],
+            coffeeTitle: props.coffee.title,
+            price: props.coffee.price,
+            quantity: quantity
+        })
+
+        toast.success(`${props.coffee.title} adicionado ao carrinho!`, {
+            position: "top-left",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+        });
+    }
 
 
     return (
@@ -97,15 +104,7 @@ export function CardCoffee(props: CardCoffeeProps) {
 
                     <MinusAndPlusButtonLARGE initialValue={1} maxQuantity={10} minQuantity={1} getPrice={setQuantity} />
 
-                    <button onClick={() => addCoffee({
-                        id: props.coffee.id,
-                        coffeeImg: COFFEE_IMAGES[props.coffee.id as keyof typeof COFFEE_IMAGES],
-                        coffeeTitle: props.coffee.title,
-                        price: props.coffee.price,
-                        quantity: quantity
-                    })
-
-                    }
+                    <button onClick={() => onAddCoffee()}
                         title='Adicionar ao carrinho de compras' className={styles.addCoffeButton}>
                         <ShoppingCart size={22} weight="fill" />
 
