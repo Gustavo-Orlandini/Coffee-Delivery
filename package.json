@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/firebase": "^3.2.1",
     "package": "^1.0.1",
     "phosphor": "^0.7.1",
     "phosphor-react": "^1.4.1",
