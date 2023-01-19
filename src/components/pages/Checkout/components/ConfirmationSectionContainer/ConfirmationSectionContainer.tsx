@@ -17,13 +17,6 @@ export function ConfirmationSectionContainer() {
     }, 0)
     const sumTotal = sumCoffees + deliveryFee
 
-    // const teste = () => {
-    //     resetCoffeList()
-    //     resetForm()
-    // }
-
-    console.log(emptyCamps)
-
     return (
         <>
             <div className={styles.buyResult}>
