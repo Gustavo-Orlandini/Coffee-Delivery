@@ -11,7 +11,7 @@ export function PaymentOptions() {
             <div className={styles.paymentInfo}>
                 <CurrencyDollar size={22} />
                 <div className={styles.paymentInfoTexts}>
-                    <span>Pagemento</span>
+                    <span>Pagamento</span>
                     <p>O pagamento é feito na entrega. Escolha a forma que deseja pagar</p>
                 </div>
             </div>
